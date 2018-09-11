@@ -1,0 +1,5 @@
+for file in src; do \
+    mkdir -p root/${file}; \
+    sudo chmod o+rwX root/${file}; \
+done
+docker-compose -p sonar-scanner -f test.yaml up
